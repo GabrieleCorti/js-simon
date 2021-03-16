@@ -41,3 +41,32 @@ var countDown = setInterval(
         time.innerHTML = start
 
 }, 1000);
+
+//faccio apparie il prompt 
+function askAnswer() {
+
+    var rightNumber = [];
+        i = 0;
+        
+    do {
+
+        var userNumber = parseInt(prompt("dimmi un numero che ti ricordi"));
+
+        if (!isNaN(userNumber) ) {
+            
+            if (numeriMemory.includes(userNumber)) { rightNumber.push(userNumber);  }
+
+            i++
+        } 
+
+
+
+    } while (i < 5);
+
+
+    var result = "hai indovinato " + rightNumber.length + " su 5, e i numeiri che hai azzecacto erano: " + rightNumber.toString();
+    alert(result);
+
+}
+
+setTimeout(askAnswer, 10500);
