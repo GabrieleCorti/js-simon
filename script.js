@@ -24,20 +24,18 @@ while (i < 5) {
 
 console.log(numeriMemory);
 
-var inizioGame = "i numerida ricordare sono: " + numeriMemory[0] + " " + numeriMemory[1] + " " + numeriMemory[2] + " " + numeriMemory[3] + " " + numeriMemory[4]
+var inizioGame = "i numerida ricordare sono: " + numeriMemory[0] + " " + numeriMemory[1] + " " + numeriMemory[2] + " " + numeriMemory[3] + " " + numeriMemory[4];
 alert(inizioGame);
 
 //faccio il conto alla rovescia 
 var time = document.getElementById("count_down");
-var start = 10;
+    start = 10;
 
 var countDown = setInterval(
     function(){
 
         start -= 1;
-        if (start == 0) {
-            clearInterval(countDown);
-        }
+        if (start == 0) { clearInterval(countDown); }
         time.innerHTML = start
 
 }, 1000);
@@ -57,9 +55,8 @@ function askAnswer() {
             if (numeriMemory.includes(userNumber)) { rightNumber.push(userNumber);  }
 
             i++
+            
         } 
-
-
 
     } while (i < 5);
 
